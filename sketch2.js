@@ -1,4 +1,4 @@
-let url = "https://io.adafruit.com/api/v2/lukwil/feeds/notifywall/data";
+let url = "https://io.adafruit.com/api/v2/";
 
 var serial; // variable to hold an instance of the serialport library
 var options = {
@@ -35,7 +35,7 @@ function notifyMe() {
 function visitorData(dataSent) {
     let postData = {
         "value": dataSent,
-        "X-AIO-Key": "aio_FUfZ77fpNr5WHUKCBCmHWUydz4Sw"
+        "X-AIO-Key": ""
     };
     httpPost(url, 'json', postData, function (result) {
         return;
@@ -50,7 +50,7 @@ function turnOff() {
 function stopLED(dataSent) {
     let postData = {
         "value": dataSent,
-        "X-AIO-Key": "aio_FUfZ77fpNr5WHUKCBCmHWUydz4Sw"
+        "X-AIO-Key": ""
     };
     httpPost(url, 'json', postData, function (result) {
         return;
@@ -87,7 +87,7 @@ function serialEvent() {
 //function myResponse(dataSent) {
 //    let postData = {
 //        "value": dataSent,
-//        "X-AIO-Key": "aio_FUfZ77fpNr5WHUKCBCmHWUydz4Sw"
+//        "X-AIO-Key": ""
 //    };
 //    httpPost(url, 'json', postData, function (result) {
 //        console.log(result);
